@@ -5,7 +5,6 @@ import "normalize.css";
 function MyApp({ Component, pageProps }) {
     return (
         <Layout>
-            <TopProgressBar />
             <Component {...pageProps} />
         </Layout>
     );
