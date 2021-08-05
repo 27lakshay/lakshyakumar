@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Layout from "../components/common/layout";
+// import Layout from "../components/common/layout";
 import "normalize.css";
 
 function MyApp({ Component, pageProps }) {
