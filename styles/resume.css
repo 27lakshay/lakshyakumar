@@ -124,12 +124,12 @@
   vertical-align: top;
   font-size: 16px;
   font-weight: 600;
-  background-color: #2a54f5;
+  /* background-color: #2a54f5;
   background-image: -webkit-linear-gradient(45deg, #2a54f5 0%, #33e5bb 100%);
   background-image: linear-gradient(45deg, #2a54f5 0%, #33e5bb 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .right ul {
@@ -155,14 +155,18 @@
   margin-top: 0;
 }
 
+.right .introduction .intro-p {
+  text-align: left;
+}
+
 .right .introduction .job-pls {
   font-weight: 500;
-  background-color: #2a54f5;
+  /* background-color: #2a54f5;
   background-image: -webkit-linear-gradient(45deg, #2a54f5 0%, #33e5bb 100%);
   background-image: linear-gradient(45deg, #2a54f5 0%, #33e5bb 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   display: inline-block;
 }
 
@@ -289,10 +293,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 545px) {
   .left-inner,
   .right-inner {
-    padding: 40px;
+    padding: 40px 20px;
   }
 }
 @media screen and (max-width: 1000px) {
