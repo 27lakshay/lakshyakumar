@@ -49,7 +49,7 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="/Lakshya-Kumar-Resume.pdf"
+                href="https://www.lakshyakumar.dev/resume.pdf/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
