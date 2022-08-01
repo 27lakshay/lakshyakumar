@@ -41,25 +41,26 @@ const Resume = () => {
       <div className="right">
         <div className="right-inner">
           <div className="introduction">
-            <h4>Intro</h4>
+            <h4>Career Objectives</h4>
             <div className="content">
-              <p className="intro-p">
+              {/* <p className="intro-p">
                 I&#39;m a recent graduate of Bachelors in Computer Applications.
-              </p>
+              </p> */}
               <p className="intro-p">
                 I enjoy being the bridge between engineering and design, and
-                feel right at home as a front end engineer. I&#39;m experienced
-                in developing and designing products for the web, from simple
-                landing pages to full-fledged web apps.
+                feel right at home as a front end engineer. I hold hands-on
+                experience in developing and designing products for the web with
+                internships from well-established companies to budding start
+                ups.
               </p>
               <span className="intro-p job-pls">
-                I&#39;m currently looking for full-time roles to work on some
-                cool projects!
+                I aspire to utilize my skill-set and continue learning as a part
+                of your team.
               </span>
             </div>
           </div>
           <div className="skills">
-            <h4>Skills</h4>
+            <h4>Technical Skills</h4>
             <div className="content">
               <div className="skill-category">
                 <strong>Languages: &nbsp;</strong>
@@ -94,11 +95,12 @@ const Resume = () => {
               <div className="major">Bachelor of Computer Applications</div>
               <div className="minor">Data Structures &amp; Algorithms</div>
               <div className="conc">Web Development</div>
-              <div className="grad-date">Duration: Aug 2019 - June 2022</div>
+              <div className="conc">2019 - 2022</div>
+              {/* <div className="grad-date"></div> */}
             </div>
           </div>
           <div className="experience">
-            <h4>Experience</h4>
+            <h4>Work Experience</h4>
             <div className="content">
               <div className="exp-item">
                 <div className="job">
@@ -135,7 +137,7 @@ const Resume = () => {
                     href="https://scoopwhoop.com/"
                     target="_blank"
                   >
-                    ScoopWhoop Media Pvt. Ltd.
+                    ScoopWhoop Media
                   </a>
                   <div className="duration">July &mdash; Dec 2021</div>
                 </div>
@@ -182,7 +184,7 @@ const Resume = () => {
                   <li>
                     Developed and maintained the website's core feature,
                     self-learning modules with 100+ screens multi-wizard having
-                    quizzed and animations
+                    quizzes and animations
                   </li>
                   <li>
                     Incorporated Redux for global state management and a Cart
