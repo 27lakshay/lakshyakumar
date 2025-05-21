@@ -13,7 +13,7 @@ export default function Home() {
           <h1 className="title_large">Hey there!</h1>
           <p className="description">
             I'm a Software Engineer. I got introduced to programming when I was
-            14 years old and have been fascinated by it, ever since.
+            16 years old and have been fascinated by it, ever since.
             <br />
             Always eager to learn and work with new technologies to provide
             meaningful and performant solutions.
@@ -40,16 +40,16 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/lakshay_ya/"
+                href="https://x.com/luxwashere"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram
+                Twitter/X
               </a>
             </li>
             <li>
               <a
-                href="https://www.lakshyakumar.dev/resume.pdf/"
+                href="/resume.pdf/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -72,6 +72,16 @@ export default function Home() {
           </p>
           <p className="description">I've previously worked with:</p>
           <ul>
+            <li>
+              <a
+                href="https://getmerlin.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Merlin AI
+              </a>
+              <span className="description"> - AI Chat & Integrations </span>
+            </li>
             <li>
               <a
                 href="https://groww.in/"

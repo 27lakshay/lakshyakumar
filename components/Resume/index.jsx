@@ -8,7 +8,7 @@ const DATA = {
   instaURL: "https://www.instagram.com/lakshay_ya/",
   githubURL: "https://github.com/27lakshay",
   linkedinURL: "https://www.linkedin.com/in/lakshyakumar27",
-  resumeURL: "https://lakshyakumar.dev/resume.pdf",
+  resumeURL: "/resume.pdf",
 };
 
 const Resume = () => {
