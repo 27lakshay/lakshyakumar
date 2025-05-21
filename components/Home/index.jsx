@@ -68,7 +68,9 @@ export default function Home() {
       <div className={styles.wrapper}>
         <div>
           <p className="description">
-            Currently I'm looking for full-time opportunities in frontend space.
+            Currently I'm looking for full-time opportunities with an impactful role in a highly driven team, with my 3 years of experience as a Founding Engineer in a AI Native Startup, I can help you ship your next BIG thing.
+            <br/>
+            Reach out, don't be shy.
           </p>
           <p className="description">I've previously worked with:</p>
           <ul>
