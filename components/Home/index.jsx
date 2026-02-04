@@ -68,12 +68,22 @@ export default function Home() {
       <div className={styles.wrapper}>
         <div>
           <p className="description">
-            Currently I'm looking for full-time opportunities with an impactful role in a highly driven team, with my 3 years of experience as a Founding Engineer in a AI Native Startup, I can help you ship your next BIG thing.
+            Currently I'm looking for full-time opportunities with an impactful role in a highly driven team, with my 3+ years of experience as a Founding Engineer in an AI Startup, I can help you ship your next big thing.
             <br/>
             Reach out, don't be shy at <b>lakshyakumar.developer@gmail.com</b>
           </p>
           <p className="description">I've previously worked with:</p>
           <ul>
+            <li>
+              <a
+                href="https://deel.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Deel
+              </a>
+              <span className="description"> - Payroll, HR, Compliance Tech </span>
+            </li>
             <li>
               <a
                 href="https://getmerlin.in/"
