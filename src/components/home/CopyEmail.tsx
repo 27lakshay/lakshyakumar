@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 
+import { trackEvent } from "@/lib/analytics";
+
 type CopyEmailProps = {
   email: string;
   className?: string;
@@ -14,6 +16,7 @@ export default function CopyEmail({ email, className }: CopyEmailProps) {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(email);
+      trackEvent("Email Copy", { location: "footer" });
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2000);
     } catch {

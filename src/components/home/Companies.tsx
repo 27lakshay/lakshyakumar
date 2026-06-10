@@ -59,6 +59,8 @@ export default function Companies() {
                 href={company.href}
                 external
                 data-company-name
+                trackEvent="Outbound Link"
+                trackProps={{ label: company.name, location: "companies" }}
                 className="font-mono text-[clamp(1.5rem,4vw,2.5rem)] leading-none transition-colors hover:text-foreground/80"
               >
                 {company.name}
@@ -72,7 +74,14 @@ export default function Companies() {
       </ul>
       <p className="mt-10 font-mono text-sm text-muted-foreground">
         Full work history and impact metrics in{" "}
-        <Link href="/resume.pdf" download underline className="text-foreground">
+        <Link
+          href="/resume.pdf"
+          download
+          underline
+          trackEvent="Resume Download"
+          trackProps={{ location: "companies" }}
+          className="text-foreground"
+        >
           résumé.pdf
         </Link>
       </p>

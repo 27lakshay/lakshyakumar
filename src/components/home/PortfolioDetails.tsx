@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import Link from "@/components/Link";
 import PortfolioLinks from "@/components/home/PortfolioLinks";
 import { resume } from "@/content/resume";
 
@@ -38,14 +39,15 @@ export function PortfolioCompanies() {
       <ul className="space-y-4">
         {companies.map((company) => (
           <li key={company.name}>
-            <a
+            <Link
               href={company.href}
-              target="_blank"
-              rel="noreferrer"
+              external
+              trackEvent="Outbound Link"
+              trackProps={{ label: company.name, location: "companies" }}
               className="font-mono text-xl text-foreground transition-colors hover:opacity-80 md:text-2xl"
             >
               {company.name}
-            </a>
+            </Link>
             <p className="font-sans text-sm text-muted-foreground">{company.about}</p>
           </li>
         ))}
@@ -82,7 +84,7 @@ export function PortfolioContact() {
       <SectionLabel>Contact</SectionLabel>
       <p className="font-mono text-2xl text-foreground md:text-3xl">Let&apos;s talk.</p>
       <p className="font-mono text-base text-foreground">{identity.email}</p>
-      <PortfolioLinks />
+      <PortfolioLinks location="contact" />
     </div>
   );
 }

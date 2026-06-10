@@ -13,6 +13,7 @@ import {
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import VercelAnalytics from "@/components/VercelAnalytics";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { baseMetadata } from "@/lib/metadata";
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </SmoothScroll>
         </ThemeProvider>
+        <VercelAnalytics />
       </body>
     </html>
   );
