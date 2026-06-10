@@ -17,20 +17,12 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-6">
           <ThemeToggle />
-          <Link
-            href="/resume"
-            trackEvent="Resume Download"
-            trackProps={{ location: "navbar" }}
-          >
+          <Link href="/resume">
             <Label className="text-muted-foreground transition-colors hover:text-foreground">
               resume
             </Label>
           </Link>
-          <Link
-            href="/blog"
-            trackEvent="Blog Click"
-            trackProps={{ location: "navbar" }}
-          >
+          <Link href="/blog">
             <Label className="text-muted-foreground transition-colors hover:text-foreground">
               blog
             </Label>

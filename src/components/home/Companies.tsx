@@ -7,6 +7,7 @@ import { useRef } from "react";
 
 import Link from "@/components/Link";
 import { resume } from "@/content/resume";
+import { outboundHref } from "@/lib/outbound";
 import { prefersReducedMotion } from "@/lib/motion-preference";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -56,11 +57,8 @@ export default function Companies() {
           <li key={company.name} data-company-row className="group py-8">
             <div className="grid gap-4 md:grid-cols-[1fr_1.2fr] md:items-start md:gap-12">
               <Link
-                href={company.href}
-                external
+                href={outboundHref(company.slug)}
                 data-company-name
-                trackEvent="Outbound Link"
-                trackProps={{ label: company.name, location: "companies" }}
                 className="font-mono text-[clamp(1.5rem,4vw,2.5rem)] leading-none transition-colors hover:text-foreground/80"
               >
                 {company.name}
@@ -74,14 +72,7 @@ export default function Companies() {
       </ul>
       <p className="mt-10 font-mono text-sm text-muted-foreground">
         Full work history and impact metrics in{" "}
-        <Link
-          href="/resume"
-          download
-          underline
-          trackEvent="Resume Download"
-          trackProps={{ location: "companies" }}
-          className="text-foreground"
-        >
+        <Link href="/resume" underline className="text-foreground">
           résumé.pdf
         </Link>
       </p>

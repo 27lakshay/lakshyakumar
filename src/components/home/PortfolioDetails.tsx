@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Link from "@/components/Link";
 import PortfolioLinks from "@/components/home/PortfolioLinks";
 import { resume } from "@/content/resume";
+import { outboundHref } from "@/lib/outbound";
 
 const sectionLabelClass =
   "font-mono text-xs uppercase tracking-[0.2em] text-section-accent";
@@ -40,10 +41,7 @@ export function PortfolioCompanies() {
         {companies.map((company) => (
           <li key={company.name}>
             <Link
-              href={company.href}
-              external
-              trackEvent="Outbound Link"
-              trackProps={{ label: company.name, location: "companies" }}
+              href={outboundHref(company.slug)}
               className="font-mono text-xl text-foreground transition-colors hover:opacity-80 md:text-2xl"
             >
               {company.name}
@@ -84,7 +82,7 @@ export function PortfolioContact() {
       <SectionLabel>Contact</SectionLabel>
       <p className="font-mono text-2xl text-foreground md:text-3xl">Let&apos;s talk.</p>
       <p className="font-mono text-base text-foreground">{identity.email}</p>
-      <PortfolioLinks location="contact" />
+      <PortfolioLinks />
     </div>
   );
 }

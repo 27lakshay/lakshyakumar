@@ -8,6 +8,7 @@ import {
   PortfolioSkills,
 } from "@/components/home/PortfolioDetails";
 import { resume } from "@/content/resume";
+import { outboundDestinations } from "@/lib/outbound";
 import { siteConfig } from "@/lib/metadata";
 
 export const metadata: Metadata = {
@@ -31,7 +32,11 @@ export default function WormholePage() {
       addressLocality: "Bengaluru",
       addressCountry: "IN",
     },
-    sameAs: identity.links.map((link) => link.href),
+    sameAs: [
+      outboundDestinations.linkedin,
+      outboundDestinations.github,
+      outboundDestinations.x,
+    ],
   };
 
   return (

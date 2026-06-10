@@ -1,6 +1,8 @@
+import { outboundHref, type OutboundSlug } from "@/lib/outbound";
+
 export type Company = {
   name: string;
-  href: string;
+  slug: OutboundSlug;
   about: string;
 };
 
@@ -27,22 +29,10 @@ export const resume = {
     location: "Bengaluru, India",
     email: "lakshyakumar.developer@gmail.com",
     links: [
-      {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/in/lakshyakumar27/",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/27lakshay",
-      },
-      {
-        label: "X (Twitter)",
-        href: "https://x.com/luxwashere",
-      },
-      {
-        label: "Resume",
-        href: "/resume",
-      },
+      { label: "LinkedIn", href: outboundHref("linkedin") },
+      { label: "GitHub", href: outboundHref("github") },
+      { label: "X (Twitter)", href: outboundHref("x") },
+      { label: "Resume", href: "/resume" },
     ],
   },
   metrics: [
@@ -53,25 +43,25 @@ export const resume = {
   companies: [
     {
       name: "Deel",
-      href: "https://www.deel.com/",
+      slug: "deel",
       about:
         "Global payroll and HR platform — hire, pay, and manage teams across 150+ countries.",
     },
     {
       name: "Merlin AI",
-      href: "https://www.getmerlin.in/",
+      slug: "merlin",
       about:
         "AI assistant for the web — browser extension and productivity tools used by millions daily.",
     },
     {
       name: "Groww",
-      href: "https://groww.in/",
+      slug: "groww",
       about:
         "India's investment platform for stocks, mutual funds, and financial products.",
     },
     {
       name: "ScoopWhoop",
-      href: "https://www.scoopwhoop.com/",
+      slug: "scoopwhoop",
       about:
         "Digital media company — news, video, and culture content for young India.",
     },

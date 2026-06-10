@@ -44,33 +44,20 @@ export default function FooterContact() {
         <Link
           href={mailtoHref}
           underline
-          trackEvent="Email Click"
-          trackProps={{ location: "footer" }}
           className="font-mono text-lg text-foreground"
         >
           {identity.email}
         </Link>
-        {identity.links.map((link) => {
-          const isResume = link.href === "/resume";
-
-          return (
-            <Link
-              key={link.label}
-              href={link.href}
-              external={!isResume}
-              underline
-              trackEvent={isResume ? "Resume Download" : "Outbound Link"}
-              trackProps={
-                isResume
-                  ? { location: "footer" }
-                  : { label: link.label, location: "footer" }
-              }
-              className="font-mono text-muted-foreground"
-            >
-              {link.label}
-            </Link>
-          );
-        })}
+        {identity.links.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            underline
+            className="font-mono text-muted-foreground"
+          >
+            {link.label}
+          </Link>
+        ))}
         <CopyEmail email={identity.email} />
       </div>
       <p className="mt-8 font-mono text-xs text-muted-foreground">

@@ -1,40 +1,24 @@
-"use client";
-
 import NextLink from "next/link";
-import type { ComponentProps, MouseEvent } from "react";
+import type { ComponentProps } from "react";
 
-import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 export type LinkProps = ComponentProps<typeof NextLink> & {
   external?: boolean;
   underline?: boolean;
-  trackEvent?: string;
-  trackProps?: Record<string, string | number | boolean>;
 };
 
 export default function Link({
   external,
   underline,
-  trackEvent: trackEventName,
-  trackProps,
   className,
   target,
   rel,
-  onClick,
   ...props
 }: LinkProps) {
-  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (trackEventName) {
-      trackEvent(trackEventName, trackProps);
-    }
-    onClick?.(event);
-  };
-
   return (
     <NextLink
       {...props}
-      onClick={handleClick}
       target={external ? (target ?? "_blank") : target}
       rel={external ? (rel ?? "noopener noreferrer") : rel}
       className={cn(
