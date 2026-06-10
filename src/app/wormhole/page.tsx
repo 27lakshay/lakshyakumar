@@ -1,3 +1,4 @@
+// Full-bleed scroll tunnel — Main exception (see AGENTS.md).
 import type { Metadata } from "next";
 
 import ContentTunnel from "@/components/home/ContentTunnel";

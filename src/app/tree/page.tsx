@@ -1,3 +1,4 @@
+// Full-bleed canvas — Main exception (see AGENTS.md).
 import type { Metadata } from "next";
 
 import TreeShowcase from "@/components/tree/TreeShowcase";

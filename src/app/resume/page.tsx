@@ -2,14 +2,20 @@
 
 import { useEffect } from "react";
 
+import Main from "@/components/Main";
+
 export default function ResumePage() {
   useEffect(() => {
     window.location.replace("/resume.pdf");
   }, []);
 
   return (
-    <p className="px-6 py-24 font-mono text-sm text-muted-foreground">
-      Opening résumé…
-    </p>
+    <Main className="gap-4 pb-16">
+      <p className="font-mono text-sm text-muted-foreground">Opening résumé…</p>
+      <p className="max-w-md font-sans text-xs text-muted-foreground/80">
+        Analytics ain&apos;t cheap in this economy — you&apos;re being counted on
+        the way out.
+      </p>
+    </Main>
   );
 }
