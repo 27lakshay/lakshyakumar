@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# lakshya.work
 
-## Getting Started
+Personal portfolio site built with Next.js App Router, React 19, and Tailwind CSS.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org/) (App Router)
+- React 19
+- Tailwind CSS 4
+- TypeScript
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
+pnpm install
+pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+For local development, create `.env.local`:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Scripts
 
-## Learn More
+| Command       | Description              |
+| ------------- | ------------------------ |
+| `pnpm dev`    | Start development server |
+| `pnpm build`  | Production build         |
+| `pnpm start`  | Serve production build   |
+| `pnpm lint`   | Run ESLint               |
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy to [Vercel](https://vercel.com) or any Node.js host that supports Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Set the production environment variable:
 
-## Deploy on Vercel
+```bash
+NEXT_PUBLIC_SITE_URL=https://www.lakshya.work
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Then:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+pnpm build
+pnpm start
+```
+
+## Routes
+
+| Path                 | Description                          |
+| -------------------- | ------------------------------------ |
+| `/`                  | Portfolio homepage                   |
+| `/blog`              | Blog (coming soon)                   |
+| `/wormhole`          | Scroll tunnel experiment             |
+| `/tree`              | Interactive canvas tree showcase     |
+| `/illuminated-tree`  | Full-screen illuminated tree         |
+| `/resume.pdf`        | Résumé PDF                           |
