@@ -22,7 +22,7 @@ export default function PortfolioLinks({
     >
       {links.map((link) => {
         const external = link.href.startsWith("http");
-        const isResume = link.href === "/resume.pdf";
+        const isResume = link.href === "/resume";
 
         return (
           <Link

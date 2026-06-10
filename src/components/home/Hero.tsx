@@ -98,7 +98,7 @@ export default function Hero() {
           </a>
           <a
             data-hero-cta
-            href="/resume.pdf"
+            href="/resume"
             download
             className="rounded-full border border-border px-6 py-3 font-mono text-sm transition-colors hover:border-foreground/30 hover:bg-white/[0.03]"
           >

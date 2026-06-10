@@ -41,7 +41,7 @@ export const resume = {
       },
       {
         label: "Resume",
-        href: "/resume.pdf",
+        href: "/resume",
       },
     ],
   },

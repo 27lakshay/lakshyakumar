@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <ThemeToggle />
           <Link
-            href="/resume.pdf"
+            href="/resume"
             trackEvent="Resume Download"
             trackProps={{ location: "navbar" }}
           >

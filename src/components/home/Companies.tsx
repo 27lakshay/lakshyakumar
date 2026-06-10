@@ -75,7 +75,7 @@ export default function Companies() {
       <p className="mt-10 font-mono text-sm text-muted-foreground">
         Full work history and impact metrics in{" "}
         <Link
-          href="/resume.pdf"
+          href="/resume"
           download
           underline
           trackEvent="Resume Download"

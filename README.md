@@ -59,4 +59,4 @@ pnpm start
 | `/wormhole`          | Scroll tunnel experiment             |
 | `/tree`              | Interactive canvas tree showcase     |
 | `/illuminated-tree`  | Full-screen illuminated tree         |
-| `/resume.pdf`        | Résumé PDF                           |
+| `/resume`            | Résumé PDF                           |

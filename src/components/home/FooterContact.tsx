@@ -51,7 +51,7 @@ export default function FooterContact() {
           {identity.email}
         </Link>
         {identity.links.map((link) => {
-          const isResume = link.href === "/resume.pdf";
+          const isResume = link.href === "/resume";
 
           return (
             <Link
