@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import type { ComponentPropsWithoutRef, ElementType } from "react";
+import { createElement } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
 import { textStyles } from "@/lib/typography";
 
@@ -17,9 +18,8 @@ export default function Text<T extends TextTag = "p">({
   className,
   ...props
 }: TextProps<T>) {
-  const Component = (as ?? "p") as ElementType;
-
-  return (
-    <Component className={clsx(textStyles[variant], className)} {...props} />
-  );
+  return createElement(as ?? "p", {
+    className: clsx(textStyles[variant], className),
+    ...props,
+  });
 }

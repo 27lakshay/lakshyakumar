@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import type { ComponentPropsWithoutRef, ElementType } from "react";
+import { createElement } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
 import { headingStyles } from "@/lib/typography";
 
@@ -17,9 +18,8 @@ export default function Heading<T extends HeadingTag = "h2">({
   className,
   ...props
 }: HeadingProps<T>) {
-  const Component = (as ?? "h2") as ElementType;
-
-  return (
-    <Component className={clsx(headingStyles[size], className)} {...props} />
-  );
+  return createElement(as ?? "h2", {
+    className: clsx(headingStyles[size], className),
+    ...props,
+  });
 }
