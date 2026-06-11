@@ -47,7 +47,9 @@ export function PortfolioCompanies() {
             >
               {company.name}
             </Link>
-            <p className="font-sans text-sm text-muted-foreground">{company.about}</p>
+            <p className="font-sans text-sm text-muted-foreground">
+              {company.about}
+            </p>
           </li>
         ))}
       </ul>
@@ -59,9 +61,11 @@ export function PortfolioContact() {
   const { identity } = resume;
 
   return (
-    <div className="min-h-[24rem] space-y-5 py-12 sm:min-h-[28rem] sm:py-16 md:min-h-[32rem] md:py-20">
+    <div className="min-h-96 space-y-5 py-12 sm:py-16 md:py-20">
       <SectionLabel>Contact</SectionLabel>
-      <p className="font-mono text-2xl text-foreground md:text-3xl">Let&apos;s talk.</p>
+      <p className="font-mono text-2xl text-foreground md:text-3xl">
+        Let&apos;s talk.
+      </p>
       <p className="font-mono text-base text-foreground">{identity.email}</p>
       <PortfolioLinks />
     </div>

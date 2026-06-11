@@ -59,7 +59,7 @@ export type LightBarProps = {
 // --- defaults ---
 
 export const DEFAULT_LIGHT_BAR_APPEARANCE: LightBarAppearance = {
-  paletteId: "amber",
+  paletteId: "teal",
   characterBrightness: 80,
   cellSize: 4,
   glow: { diffuse: 90, spread: 3 },

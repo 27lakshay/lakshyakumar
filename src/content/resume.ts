@@ -25,7 +25,8 @@ export const resume = {
     headline: ["Software", "Engineer"],
     availability:
       "Open to full-time roles & consulting work — drop an email at",
-    tagline: "TypeScript · React · Node.js · Next.js · Web performance at scale",
+    tagline:
+      "TypeScript · React · Node.js · Next.js · Web performance at scale",
     location: "Bengaluru, India",
     email: "lakshyakumar.developer@gmail.com",
     links: [
@@ -68,15 +69,23 @@ export const resume = {
   ] satisfies Company[],
   skills: [
     "TypeScript",
-    "React",
+    "JavaScript",
+    "React.js",
     "Next.js",
+    "Node.js",
     "Browser Extensions",
     "Web Performance",
-    "TanStack Query",
-    "Tailwind",
+    "TanStack",
+    "Zustand",
+    "ShadCN",
+    "Tailwind CSS",
     "Vite",
-    "Monorepos",
     "LLMs",
+    "AI Agents",
+    "Cursor",
+    "Claude Code",
+    "MCPs",
+    "RAG",
   ],
 } as const;
 
