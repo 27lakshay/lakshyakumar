@@ -3,20 +3,17 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 
-import ErrorBoundary from "@/components/ErrorBoundary";
-import { cn } from "@/lib/utils";
-
 const IlluminatedTree = dynamic(
   () => import("@/components/tree/IlluminatedTree"),
   { ssr: false },
 );
 
-const Dither = dynamic(() => import("@/components/Dither"), { ssr: false });
+// const Dither = dynamic(() => import("@/components/Dither"), { ssr: false });
 
 export default function LazyIlluminatedTree() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
-  const [ditherVisible, setDitherVisible] = useState(false);
+  // const [ditherVisible, setDitherVisible] = useState(false);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -36,20 +33,20 @@ export default function LazyIlluminatedTree() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (!shouldLoad) return;
-
-    const id = requestAnimationFrame(() => {
-      requestAnimationFrame(() => setDitherVisible(true));
-    });
-    return () => cancelAnimationFrame(id);
-  }, [shouldLoad]);
+  // useEffect(() => {
+  //   if (!shouldLoad) return;
+  //
+  //   const id = requestAnimationFrame(() => {
+  //     requestAnimationFrame(() => setDitherVisible(true));
+  //   });
+  //   return () => cancelAnimationFrame(id);
+  // }, [shouldLoad]);
 
   return (
     <div ref={containerRef} className="relative h-full w-full">
       {shouldLoad ? (
         <>
-          <ErrorBoundary fallback={null}>
+          {/* <ErrorBoundary fallback={null}>
             <div
               className={cn(
                 "absolute inset-0 z-0 opacity-0 transition-opacity duration-2000 ease-in motion-reduce:opacity-20 motion-reduce:transition-none",
@@ -70,7 +67,7 @@ export default function LazyIlluminatedTree() {
                 waveSpeed={0.01}
               />
             </div>
-          </ErrorBoundary>
+          </ErrorBoundary> */}
           <div className="relative z-10 h-full w-full">
             <IlluminatedTree />
           </div>
