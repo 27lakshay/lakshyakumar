@@ -36,7 +36,7 @@ export default function HomePage() {
       <Main className="gap-16">
         <PortfolioDetails />
       </Main>
-      <footer className="relative z-10 h-72 w-full sm:h-80 md:h-96 lg:h-112">
+      <footer className="relative z-10 h-72 w-full sm:h-80 md:h-96 lg:h-112 pt-4">
         <LazyIlluminatedTree />
       </footer>
     </>
