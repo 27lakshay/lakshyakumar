@@ -58,7 +58,7 @@ export default function LazyIlluminatedTree() {
             >
               <Dither
                 waveColor={[
-                  0.3686274509803922, 0.9176470588235294, 0.8313725490196079,
+                  0.6705882352941176, 0.5450980392156862, 0.1607843137254902,
                 ]}
                 disableAnimation={false}
                 enableMouseInteraction={false}

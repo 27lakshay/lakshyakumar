@@ -11,6 +11,7 @@
   --color-section-accent: var(--section-accent);
   --font-mono: var(--font-departure-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --font-sans: var(--font-sans);
+  --font-inter: var(--font-inter);
   --font-pixel-square: var(--font-geist-pixel-square), monospace;
   --font-pixel-grid: var(--font-geist-pixel-grid), monospace;
   --font-pixel-circle: var(--font-geist-pixel-circle), monospace;

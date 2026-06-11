@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import type { Viewport } from "next";
 import localFont from "next/font/local";
-import { Space_Grotesk } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
+
 import {
   GeistPixelCircle,
   GeistPixelGrid,
@@ -20,7 +21,13 @@ import { baseMetadata } from "@/lib/metadata";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 
-const spaceGrotesk = Space_Grotesk({subsets:['latin'],variable:'--font-sans'});
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-sans" });
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const departureMono = localFont({
   src: "../../public/fonts/departureMono.woff2",
@@ -46,6 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
       className={cn(
         spaceGrotesk.variable,
+        inter.variable,
         departureMono.variable,
         GeistPixelSquare.variable,
         GeistPixelGrid.variable,

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 import Link from "@/components/Link";
+import { PortfolioSkills } from "@/components/home/PortfolioSkillsBar";
 import PortfolioLinks from "@/components/home/PortfolioLinks";
 import { resume } from "@/content/resume";
 import { outboundHref } from "@/lib/outbound";
@@ -54,31 +55,11 @@ export function PortfolioCompanies() {
   );
 }
 
-export function PortfolioSkills() {
-  const { skills } = resume;
-
-  return (
-    <div className="space-y-5">
-      <SectionLabel>Skills</SectionLabel>
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill) => (
-          <span
-            key={skill}
-            className="rounded-full border border-border px-3 py-1 font-mono text-sm text-muted-foreground"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export function PortfolioContact() {
   const { identity } = resume;
 
   return (
-    <div className="space-y-5">
+    <div className="min-h-[24rem] space-y-5 py-12 sm:min-h-[28rem] sm:py-16 md:min-h-[32rem] md:py-20">
       <SectionLabel>Contact</SectionLabel>
       <p className="font-mono text-2xl text-foreground md:text-3xl">Let&apos;s talk.</p>
       <p className="font-mono text-base text-foreground">{identity.email}</p>
@@ -97,3 +78,5 @@ export default function PortfolioDetails() {
     </>
   );
 }
+
+export { PortfolioSkills } from "@/components/home/PortfolioSkillsBar";

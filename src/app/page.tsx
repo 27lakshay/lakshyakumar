@@ -1,5 +1,10 @@
 import Main from "@/components/Main";
-import PortfolioDetails from "@/components/home/PortfolioDetails";
+import {
+  PortfolioCompanies,
+  PortfolioContact,
+  PortfolioHero,
+  PortfolioSkills,
+} from "@/components/home/PortfolioDetails";
 import LazyIlluminatedTree from "@/components/tree/LazyIlluminatedTree";
 import { resume } from "@/content/resume";
 import { outboundDestinations } from "@/lib/outbound";
@@ -34,7 +39,10 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Main className="gap-16">
-        <PortfolioDetails />
+        <PortfolioHero />
+        <PortfolioCompanies />
+        <PortfolioSkills />
+        <PortfolioContact />
       </Main>
       <footer className="relative z-10 h-72 w-full sm:h-80 md:h-96 lg:h-112 pt-4">
         <LazyIlluminatedTree />
