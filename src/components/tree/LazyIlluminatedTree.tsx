@@ -52,8 +52,8 @@ export default function LazyIlluminatedTree() {
           <ErrorBoundary fallback={null}>
             <div
               className={cn(
-                "absolute inset-0 z-0 opacity-0 transition-opacity duration-1000 ease-out motion-reduce:opacity-30 motion-reduce:transition-none",
-                ditherVisible && "opacity-30",
+                "absolute inset-0 z-0 opacity-0 transition-opacity duration-2000 ease-in motion-reduce:opacity-20 motion-reduce:transition-none",
+                ditherVisible && "opacity-20",
               )}
             >
               <Dither
