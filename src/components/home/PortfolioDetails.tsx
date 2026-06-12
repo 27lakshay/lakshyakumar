@@ -66,7 +66,7 @@ export function PortfolioContact() {
       <p className="font-mono text-2xl text-foreground md:text-3xl">
         Let&apos;s talk.
       </p>
-      <p className="font-mono text-base text-foreground">{identity.email}</p>
+      <p className="font-sans text-base text-foreground">{identity.email}</p>
       <PortfolioLinks />
     </div>
   );

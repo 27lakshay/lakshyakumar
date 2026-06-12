@@ -44,7 +44,7 @@ export default function HomePage() {
         <PortfolioSkills />
         <PortfolioContact />
       </Main>
-      <footer className="relative z-10 h-72 w-full sm:h-80 md:h-96 lg:h-112 pt-4">
+      <footer className="relative z-10 h-80 w-full sm:h-96 md:h-112 lg:h-128">
         <LazyIlluminatedTree />
       </footer>
     </>
